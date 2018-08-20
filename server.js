@@ -25,6 +25,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/routes.js");
 
-app.use(timeout('25000')("/", routes));
+app.use("/", routes);
+app.use(setTimeout('25000'))
 
 app.listen(port);
